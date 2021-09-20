@@ -37,7 +37,7 @@ const ContactList: React.FC<{}> = props => {
               key={id}
               ref={lastContactElementRef}
               onClick={() => setCurrentContact(id)}
-              className={`block w-full text-left font-normal m-0 py-1 px-4 text-lg hover:bg-blue-400 hover:text-white ${
+              className={`block w-full text-left font-normal m-0 py-1 px-4 text-lg hover:bg-blue-400 hover:text-white mb-48 ${
                 currentContact !== id ? "" : "bg-blue-500 text-white"
               }`}
             >
@@ -60,7 +60,6 @@ const ContactList: React.FC<{}> = props => {
       })}
       {loading && <Spinner />}
       {error && <div className="font-medium">Request failed...</div>}
-      <div className="mb-48" />
     </div>
   );
 };
