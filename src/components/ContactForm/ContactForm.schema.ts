@@ -10,6 +10,9 @@ export const ContactFormSchema = Yup.object().shape({
     .max(20, "Too long!")
     .required("Required"),
   emails: Yup.array().of(
-    Yup.string().email("Invalid email").required("Required")
+    Yup.string()
+      .email("Invalid email")
+      .max(254, "Too long!")
+      .required("Required")
   ),
 });
